@@ -12,14 +12,14 @@ spec:
         - ref: cnkt-trigger-binding
       template:
         ref: mq-infra-dev
-      interceptors:
-        - cel:
-            filter: header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/qm1-client-engineering-gitops-h' && body.repository.full_name == 'client-engineering-gitops-h/mq-infra'
-    - name: mq-spring-app-dev
-      bindings:
-        - ref: cnkt-trigger-binding
-      template:
-        ref: mq-spring-app-dev
-      interceptors:
-        - cel:
-            filter: header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/mq-spring-client-engineering-gitops-h' && body.repository.full_name == 'client-engineering-gitops-h/mq-spring-app'
+#       interceptors:
+#         - cel:
+#             filter: header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/qm1-client-engineering-gitops-h' && body.repository.full_name == 'client-engineering-gitops-h/mq-infra'
+#     - name: mq-spring-app-dev
+#       bindings:
+#         - ref: cnkt-trigger-binding
+#       template:
+#         ref: mq-spring-app-dev
+#       interceptors:
+#         - cel:
+#             filter: header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/mq-spring-client-engineering-gitops-h' && body.repository.full_name == 'client-engineering-gitops-h/mq-spring-app'
