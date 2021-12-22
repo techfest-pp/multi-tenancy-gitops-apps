@@ -2,10 +2,10 @@ resources:
 #- certificates/ci-mq-client-certificate.yaml
 #- certificates/ci-mq-server-certificate.yaml
 - configmaps/gitops-repo-configmap.yaml
-- eventlisteners/cntk-event-listener.yaml
-- triggerbindings/cntk-binding.yaml
-- triggertemplates/mq-infra-dev.yaml
-- triggertemplates/mq-spring-app-dev.yaml
+#- eventlisteners/cntk-event-listener.yaml
+# - triggerbindings/cntk-binding.yaml
+# - triggertemplates/mq-infra-dev.yaml
+#- triggertemplates/mq-spring-app-dev.yaml
 - pipelines/ibm-test-pipeline-for-dev.yaml
 - pipelines/ibm-test-pipeline-for-stage.yaml
 #- pipelines/java-maven-dev-pipeline.yaml
