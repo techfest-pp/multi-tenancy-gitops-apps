@@ -8,6 +8,9 @@ spec:
   serviceAccountName: pipeline
   triggers:
     - name: mq-infra-dev
+      interceptors:
+        - cel:
+            filter: header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/qm1-client-engineering-gitops-h' && body.repository.full_name == 'client-engineering-gitops-h/mq-infra'
       bindings:
         - ref: cnkt-trigger-binding
       template:
