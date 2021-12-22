@@ -19,6 +19,12 @@ spec:
       template:
         ref: mq-infra-dev
     - name: mq-spring-app-dev
+      interceptors:
+        - ref:
+            name: "cel"
+          params:
+          - name: "filter"
+            value: "header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/mq-spring-client-engineering-gitops-h' && body.repository.full_name == 'client-engineering-gitops-h/mq-spring-app'"
       bindings:
         - ref: cnkt-trigger-binding
       template:
