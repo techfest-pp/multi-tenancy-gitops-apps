@@ -20,16 +20,19 @@ resources:
 - secrets/artifactory-access-secret.yaml
 - secrets/git-credentials-secret.yaml
 - secrets/ibm-entitled-registry-credentials-secret.yaml
-#- secrets/mq-client-jks-password-secret.yaml
+- secrets/mq-client-jks-password-secret.yaml
 - tasks/10-gitops.yaml
-- tasks/12-functional-tests.yaml
-- tasks/13-jmeter-performance-test.yaml
+# - tasks/12-functional-tests.yaml
+# - tasks/13-jmeter-performance-test.yaml
 - tasks/4-smoke-tests-mq.yaml
 - tasks/4-smoke-tests.yaml
 - tasks/ibm-build-tag-push-v2-6-13.yaml
 - tasks/ibm-helm-release-v2-6-13.yaml
 - tasks/ibm-img-release-v2-6-13.yaml
 - tasks/ibm-img-scan-v2-6-13.yaml
-- tasks/ibm-java-maven-test-v2-6-13.yaml
+- tasks/1-java-maven-test.yaml
 - tasks/ibm-setup-v2-6-13.yaml
 - tasks/ibm-tag-release-v2-6-13.yaml
+- tasks/2-lint-dockerfile.yaml
+- tasks/4-deploy.yaml
+- tasks/5-health-check-mq.yaml
