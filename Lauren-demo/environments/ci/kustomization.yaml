@@ -8,7 +8,7 @@ resources:
 - pipelines/ibm-test-pipeline-for-dev.yaml
 - pipelines/ibm-test-pipeline-for-stage.yaml
 #- pipelines/java-maven-dev-pipeline.yaml
-#- pipelines/Lauren-demo-pipeline-dev.yaml
+- pipelines/Lauren-demo-pipeline-dev.yaml
 - pipelines/Lauren-demo-dev-pipeline.yaml
 - roles/custom-pipeline-sa-clusterrole.yaml
 - roles/custom-pipeline-sa-role.yaml
@@ -20,9 +20,9 @@ resources:
 - secrets/artifactory-access-secret.yaml
 - secrets/git-credentials-secret.yaml
 - secrets/ibm-entitled-registry-credentials-secret.yaml
-- secrets/mq-client-jks-password-secret.yaml
+# - secrets/mq-client-jks-password-secret.yaml
 - tasks/10-gitops.yaml
-# - tasks/12-functional-tests.yaml
+- tasks/12-functional-tests.yaml
 # - tasks/13-jmeter-performance-test.yaml
 - tasks/4-smoke-tests-mq.yaml
 - tasks/4-smoke-tests.yaml
