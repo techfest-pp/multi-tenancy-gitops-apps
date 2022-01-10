@@ -16,24 +16,24 @@ spec:
       default: master
     - name: source-dir
       default: /source
-    - name: image-server
-      default: ""
-    - name: image-namespace
-      default: ""
-    - name: image-repository
-      default: ""
-    - name: image-tag
-      default: ""
+    # - name: image-server
+    #   default: ""
+    # - name: image-namespace
+    #   default: ""
+    # - name: image-repository
+    #   default: ""
+    # - name: image-tag
+    #   default: ""
     - name: BUILDER_IMAGE
       default: quay.io/buildah/stable:v1.15.0
-    - name: DOCKERFILE
-      default: ./Dockerfile
+    # - name: DOCKERFILE
+    #   default: ./Dockerfile
     - name: CONTEXT
       default: .
     - name: TLSVERIFY
       default: "false"
-    - name: FORMAT
-      default: "docker"
+    # - name: FORMAT
+    #   default: "docker"
     - name: STORAGE_DRIVER
       description: Set buildah storage driver
       default: overlay

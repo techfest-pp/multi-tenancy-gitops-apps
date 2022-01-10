@@ -73,14 +73,14 @@ spec:
           value: "$(tasks.setup.results.git-revision)"
         - name: source-dir
           value: "$(tasks.setup.results.source-dir)"
-        - name: image-server
-          value: "$(tasks.setup.results.image-server)"
-        - name: image-namespace
-          value: "$(tasks.setup.results.image-namespace)"
-        - name: image-repository
-          value: "$(tasks.setup.results.image-repository)"
-        - name: image-tag
-          value: "$(tasks.setup.results.image-tag)"
+        # - name: image-server
+        #   value: "$(tasks.setup.results.image-server)"
+        # - name: image-namespace
+        #   value: "$(tasks.setup.results.image-namespace)"
+        # - name: image-repository
+        #   value: "$(tasks.setup.results.image-repository)"
+        # - name: image-tag
+        #   value: "$(tasks.setup.results.image-tag)"
     - name: deploy
       taskRef:
         name: ibm-deploy
@@ -93,14 +93,14 @@ spec:
           value: "$(tasks.setup.results.git-revision)"
         - name: source-dir
           value: "$(tasks.setup.results.source-dir)"
-        - name: image-server
-          value: "$(tasks.setup.results.image-server)"
-        - name: image-namespace
-          value: "$(tasks.setup.results.image-namespace)"
-        - name: image-repository
-          value: "$(tasks.setup.results.image-repository)"
-        - name: image-tag
-          value: "$(tasks.setup.results.image-tag)"
+        # - name: image-server
+        #   value: "$(tasks.setup.results.image-server)"
+        # - name: image-namespace
+        #   value: "$(tasks.setup.results.image-namespace)"
+        # - name: image-repository
+        #   value: "$(tasks.setup.results.image-repository)"
+        # - name: image-tag
+        #   value: "$(tasks.setup.results.image-tag)"
         - name: app-namespace
           value: "$(tasks.setup.results.app-namespace)"
         - name: app-name
