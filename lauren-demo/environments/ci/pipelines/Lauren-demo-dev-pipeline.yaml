@@ -31,41 +31,41 @@ spec:
           value: $(params.scan-image)
         - name: lint-dockerfile
           value: $(params.lint-dockerfile)
-    - name: test
-      taskRef:
-        name: ibm-java-maven-test
-      runAfter:
-        - setup
-      params:
-        - name: git-url
-          value: "$(tasks.setup.results.git-url)"
-        - name: git-revision
-          value: "$(tasks.setup.results.git-revision)"
-        - name: source-dir
-          value: "$(tasks.setup.results.source-dir)"
-        - name: app-name
-          value: "$(tasks.setup.results.app-name)"
+    # - name: test
+    #   taskRef:
+    #     name: ibm-java-maven-test
+    #   runAfter:
+    #     - setup
+    #   params:
+    #     - name: git-url
+    #       value: "$(tasks.setup.results.git-url)"
+    #     - name: git-revision
+    #       value: "$(tasks.setup.results.git-revision)"
+    #     - name: source-dir
+    #       value: "$(tasks.setup.results.source-dir)"
+    #     - name: app-name
+    #       value: "$(tasks.setup.results.app-name)"
 
-    - name: dockerfile-lint
-      taskRef:
-        name: ibm-dockerfile-lint
-      runAfter:
-        - test
-      params:
-        - name: git-url
-          value: "$(tasks.setup.results.git-url)"
-        - name: git-revision
-          value: "$(tasks.setup.results.git-revision)"
-        - name: source-dir
-          value: "$(tasks.setup.results.source-dir)"
-        - name: lint-dockerfile
-          value: "$(tasks.setup.results.dockerfile-lint)"
+    # - name: dockerfile-lint
+    #   taskRef:
+    #     name: ibm-dockerfile-lint
+    #   runAfter:
+    #     - test
+    #   params:
+    #     - name: git-url
+    #       value: "$(tasks.setup.results.git-url)"
+    #     - name: git-revision
+    #       value: "$(tasks.setup.results.git-revision)"
+    #     - name: source-dir
+    #       value: "$(tasks.setup.results.source-dir)"
+    #     - name: lint-dockerfile
+    #       value: "$(tasks.setup.results.dockerfile-lint)"
           
     - name: build
       taskRef:
         name: ibm-build-tag-push
       runAfter:
-        - dockerfile-lint
+        - setup #dockerfile-lint 
       params:
         - name: git-url
           value: "$(tasks.setup.results.git-url)"

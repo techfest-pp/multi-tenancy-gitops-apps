@@ -31,7 +31,7 @@ resources:
 - tasks/ibm-img-release-v2-6-13.yaml
 - tasks/ibm-img-scan-v2-6-13.yaml
 - tasks/1-java-maven-test.yaml
-- tasks/ibm-setup-v2-6-13.yaml
+- tasks/ibm-setup.yaml
 - tasks/ibm-tag-release-v2-6-13.yaml
 - tasks/2-lint-dockerfile.yaml
 - tasks/4-deploy.yaml
