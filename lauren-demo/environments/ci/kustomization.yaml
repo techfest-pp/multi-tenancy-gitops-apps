@@ -4,8 +4,8 @@ resources:
 - configmaps/gitops-repo-configmap.yaml
 - eventlisteners/cntk-event-listener.yaml
 - triggerbindings/cntk-binding.yaml
-# - triggertemplates/Lauren-demo-dev.yaml
-- pipelines/ibm-test-pipeline-for-dev.yaml
+- triggertemplates/Lauren-demo-dev.yaml
+# - pipelines/ibm-test-pipeline-for-dev.yaml
 # - pipelines/ibm-test-pipeline-for-stage.yaml
 # #- pipelines/java-maven-dev-pipeline.yaml
 # - pipelines/Lauren-demo-pipeline-dev.yaml
