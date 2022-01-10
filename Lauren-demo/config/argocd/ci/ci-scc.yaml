@@ -15,7 +15,7 @@ spec:
     server: https://kubernetes.default.svc
   project: applications
   source:
-    path: Lauren-demo/environments/ci/scc
+    path: lauren-demo/environments/ci/scc
     repoURL: https://github.com/client-engineering-gitops-h/multi-tenancy-gitops-apps.git
     targetRevision: master
   syncPolicy:
