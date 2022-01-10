@@ -12,10 +12,10 @@ spec:
       ref: cnkt-trigger-binding
     interceptors:
     - cel:
-        filter: header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/${GIT_BRANCH}' && body.repository.full_name == '${GIT_ORG}/mq-infra'
-    name: mq-infra-dev
+        filter: header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/${GIT_BRANCH}' && body.repository.full_name == '${GIT_ORG}/Lauren-demo'
+    name: Lauren-demo-dev
     template:
-      ref: mq-infra-dev
+      ref: Lauren-demo-dev
   # - bindings:
   #   - kind: TriggerBinding
   #     ref: cnkt-trigger-binding

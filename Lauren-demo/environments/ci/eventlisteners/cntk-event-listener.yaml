@@ -7,17 +7,17 @@ metadata:
 spec:
   serviceAccountName: pipeline
   triggers:
-    - name: mq-infra-dev
+    - name: Lauren-demo-dev
       interceptors:
         - ref:
             name: "cel"
           params:
           - name: "filter"
-            value: "header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/qm1-client-engineering-gitops-h' && body.repository.full_name == 'client-engineering-gitops-h/mq-infra'"
+            value: "header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/qm1-client-engineering-gitops-h' && body.repository.full_name == 'client-engineering-gitops-h/Lauren-demo'"
       bindings:
         - ref: cnkt-trigger-binding
       template:
-        ref: mq-infra-dev
+        ref: Lauren-demo-dev
     - name: Lauren-demo-dev
       interceptors:
         - ref:
