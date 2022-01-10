@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
-  name: ibm-img-release-v2-6-13
+  name: ibm-img-release
   annotations:
     description: Tags the git repository and releases the intermediate container image with the version tag
     app.openshift.io/description: Tags the git repository and releases the intermediate container image with the version tag
