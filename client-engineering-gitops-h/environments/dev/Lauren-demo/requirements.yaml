@@ -1,0 +1,4 @@
+dependencies:
+  - name: Lauren-demo-app
+    version: 0.0.11
+    repository: http://artifactory-artifactory.tools:8082/artifactory/generic-local/ci
