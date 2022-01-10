@@ -35,4 +35,4 @@ resources:
 - tasks/ibm-tag-release.yaml
 - tasks/2-lint-dockerfile.yaml
 - tasks/4-deploy.yaml
-# - tasks/5-health-check-mq.yaml
+- tasks/5-health-check.yaml
