@@ -109,33 +109,33 @@ spec:
           value: "$(tasks.setup.results.deploy-ingress-type)"
         - name: tools-image
           value: "$(tasks.setup.results.tools-image)"
-    - name: health
-      taskRef:
-        name: ibm-health-check
-      runAfter:
-        - deploy
-      params:
-        - name: app-namespace
-          value: "$(tasks.setup.results.app-namespace)"
-        - name: app-name
-          value: "$(tasks.setup.results.app-name)"
-        - name: deploy-ingress-type
-          value: "$(tasks.setup.results.deploy-ingress-type)"
-        - name: health-protocol
-          value: "$(tasks.setup.results.health-protocol)"
-        - name: health-endpoint
-          value: "$(tasks.setup.results.health-endpoint)"
-        - name: health-url
-          value: "$(tasks.setup.results.health-url)"
-        - name: health-curl
-          value: "$(tasks.setup.results.health-curl)"
-        - name: tools-image
-          value: "$(tasks.setup.results.tools-image)"
+    # - name: health
+    #   taskRef:
+    #     name: ibm-health-check
+    #   runAfter:
+    #     - deploy
+    #   params:
+    #     - name: app-namespace
+    #       value: "$(tasks.setup.results.app-namespace)"
+    #     - name: app-name
+    #       value: "$(tasks.setup.results.app-name)"
+    #     - name: deploy-ingress-type
+    #       value: "$(tasks.setup.results.deploy-ingress-type)"
+    #     - name: health-protocol
+    #       value: "$(tasks.setup.results.health-protocol)"
+    #     - name: health-endpoint
+    #       value: "$(tasks.setup.results.health-endpoint)"
+    #     - name: health-url
+    #       value: "$(tasks.setup.results.health-url)"
+    #     - name: health-curl
+    #       value: "$(tasks.setup.results.health-curl)"
+    #     - name: tools-image
+    #       value: "$(tasks.setup.results.tools-image)"
     - name: tag-release
       taskRef:
         name: ibm-tag-release
       runAfter:
-        - health
+        - ibm-deploy #health
       params:
         - name: git-url
           value: "$(tasks.setup.results.git-url)"
