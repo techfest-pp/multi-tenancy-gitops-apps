@@ -22,7 +22,7 @@ resources:
 # # - secrets/mq-client-jks-password-secret.yaml
 - tasks/1-java-maven-test.yaml
 - tasks/2-lint-dockerfile.yaml
-- tasks/4-deploy.yaml
+# - tasks/4-deploy.yaml
 - tasks/4-smoke-tests.yaml
 - tasks/5-health-check.yaml
 - tasks/10-gitops.yaml
