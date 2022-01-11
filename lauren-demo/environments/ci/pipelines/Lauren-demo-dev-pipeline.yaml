@@ -109,16 +109,16 @@ spec:
     #       value: "$(tasks.setup.results.deploy-ingress-type)"
     #     - name: tools-image
     #       value: "$(tasks.setup.results.tools-image)"
-    - name: health
-      taskRef:
-        name: ibm-health-check
-      runAfter:
-        - build #deploy
-      params:
-        - name: app-namespace
-          value: "$(tasks.setup.results.app-namespace)"
-        - name: app-name
-          value: "$(tasks.setup.results.app-name)"
+    # - name: health
+    #   taskRef:
+    #     name: ibm-health-check
+    #   runAfter:
+    #     - build #deploy
+    #   params:
+    #     - name: app-namespace
+    #       value: "$(tasks.setup.results.app-namespace)"
+    #     - name: app-name
+    #       value: "$(tasks.setup.results.app-name)"
         # - name: deploy-ingress-type
         #   value: "$(tasks.setup.results.deploy-ingress-type)"
         # - name: health-protocol
@@ -129,13 +129,13 @@ spec:
         #   value: "$(tasks.setup.results.health-url)"
         # - name: health-curl
         #   value: "$(tasks.setup.results.health-curl)"
-        - name: tools-image
-          value: "$(tasks.setup.results.tools-image)"
+        # - name: tools-image
+        #   value: "$(tasks.setup.results.tools-image)"
     - name: tag-release
       taskRef:
         name: ibm-tag-release
       runAfter:
-        - health
+        - build #health
       params:
         - name: git-url
           value: "$(tasks.setup.results.git-url)"

@@ -24,7 +24,7 @@ resources:
 - tasks/2-lint-dockerfile.yaml
 # - tasks/4-deploy.yaml
 - tasks/4-smoke-tests.yaml
-- tasks/5-health-check.yaml
+# - tasks/5-health-check.yaml
 - tasks/10-gitops.yaml
 - tasks/ibm-build-tag-push.yaml
 - tasks/ibm-helm-release.yaml
