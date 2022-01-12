@@ -17,7 +17,22 @@ spec:
       default: "true"
     - name: lint-dockerfile
       description: Enable the pipeline to lint the Dockerfile for best practices
-      default: "true"      
+      default: "true"
+    - name: environment
+      description: environment
+      default: dev
+    - name: app-path
+      description: Path in gitops repo
+      default: lauren-demo/environment
+    - name: security
+      description: Enable security for queueManager
+      default: "false"
+    - name: ha
+      description: Enable ha for queueManager
+      default: "false"
+    - name: git-pr
+      description: Enable the pipeline to do a PR for the gitops repo
+      default: "false"
   tasks:
     - name: setup
       taskRef:
@@ -163,10 +178,10 @@ spec:
       params:
         - name: image-url
           value: $(tasks.img-release.results.image-url)
-        - name: scan-trivy
-          value: $(tasks.setup.results.scan-trivy)
-        - name: scan-ibm
-          value: $(tasks.setup.results.scan-ibm)
+#         - name: scan-trivy
+#           value: $(tasks.setup.results.scan-trivy)
+#         - name: scan-ibm
+#           value: $(tasks.setup.results.scan-ibm)
     - name: helm-release
       taskRef:
         name: ibm-helm-release
