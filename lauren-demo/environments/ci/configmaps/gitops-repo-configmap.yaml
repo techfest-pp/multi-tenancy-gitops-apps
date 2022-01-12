@@ -14,4 +14,4 @@ data:
   parentdir: .
   protocol: https
   repo: multi-tenancy-gitops-apps
-  url: https://github.com/client-engineering-gitops-h/multi-tenancy-gitops-apps.gitEOF
+  url: https://github.com/client-engineering-gitops-h/multi-tenancy-gitops-apps.git
