@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
-  name: lauren-demo-dev
+  name: lauren-demo-dev-pipeline
   annotations:
     app.openshift.io/runtime: openjdk
     app.openshift.io/builder: maven

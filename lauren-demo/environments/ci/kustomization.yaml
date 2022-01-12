@@ -3,7 +3,6 @@ resources:
 # #- certificates/ci-mq-server-certificate.yaml
 - configmaps/gitops-repo-configmap.yaml
 - eventlisteners/cntk-event-listener.yaml
-
 # - pipelines/ibm-test-pipeline-for-dev.yaml
 # - pipelines/ibm-test-pipeline-for-stage.yaml
 # #- pipelines/java-maven-dev-pipeline.yaml
@@ -30,7 +29,6 @@ resources:
 - tasks/ibm-helm-release.yaml
 - tasks/ibm-img-release.yaml
 - tasks/ibm-img-scan.yaml
-
 - tasks/ibm-setup.yaml
 - tasks/ibm-tag-release.yaml
 - triggerbindings/cntk-binding.yaml
@@ -38,7 +36,3 @@ resources:
 # - tasks/12-functional-tests.yaml
 # # - tasks/13-jmeter-performance-test.yaml
 # - tasks/4-smoke-tests.yaml
-
-
-
-
