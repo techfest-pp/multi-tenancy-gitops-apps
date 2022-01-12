@@ -48,7 +48,7 @@ spec:
           value: $(params.lint-dockerfile)
     - name: test
       taskRef:
-        name: ibm-java-maven-test
+        name: ibm-javascript-test
       runAfter:
         - setup
       params:
