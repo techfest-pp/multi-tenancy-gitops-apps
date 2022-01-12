@@ -3,5 +3,5 @@ global: {}
 
 service-account:
   name: pipeline
-  create: false
+  create: true
   sccs: ["privileged"]
