@@ -3,7 +3,7 @@ resources:
 # #- certificates/ci-mq-server-certificate.yaml
 - configmaps/gitops-repo-configmap.yaml
 - eventlisteners/cntk-event-listener.yaml
-# - pipelines/ibm-test-pipeline-for-dev.yaml
+- pipelines/ibm-lauren-dev-stage.yaml
 # - pipelines/ibm-test-pipeline-for-stage.yaml
 # #- pipelines/java-maven-dev-pipeline.yaml
 # - pipelines/lauren-demo-pipeline-dev.yaml
