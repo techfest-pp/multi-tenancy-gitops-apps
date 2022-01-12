@@ -23,7 +23,7 @@ spec:
       default: dev
     - name: app-path
       description: Path in gitops repo
-      default: lauren-demo/environments
+      default: lauren-demo/environment
     - name: security
       description: Enable security for queueManager
       default: "false"
