@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
-  name: lauren-demo-dev 
+  name: lauren-demo-dev
   annotations:
     app.openshift.io/runtime: openjdk
     app.openshift.io/builder: maven
@@ -98,34 +98,34 @@ spec:
           value: "$(tasks.setup.results.image-repository)"
         - name: image-tag
           value: "$(tasks.setup.results.image-tag)"
-    - name: deploy
-      taskRef:
-        name: ibm-deploy
-      runAfter:
-        - build
-      params:
-        - name: git-url
-          value: "$(tasks.setup.results.git-url)"
-        - name: git-revision
-          value: "$(tasks.setup.results.git-revision)"
-        - name: source-dir
-          value: "$(tasks.setup.results.source-dir)"
-        - name: image-server
-          value: "$(tasks.setup.results.image-server)"
-        - name: image-namespace
-          value: "$(tasks.setup.results.image-namespace)"
-        - name: image-repository
-          value: "$(tasks.setup.results.image-repository)"
-        - name: image-tag
-          value: "$(tasks.setup.results.image-tag)"
-        - name: app-namespace
-          value: "$(tasks.setup.results.app-namespace)"
-        - name: app-name
-          value: "$(tasks.setup.results.app-name)"
-        - name: deploy-ingress-type
-          value: "$(tasks.setup.results.deploy-ingress-type)"
-        - name: tools-image
-          value: "$(tasks.setup.results.tools-image)"
+    # - name: deploy
+    #   taskRef:
+    #     name: ibm-deploy
+    #   runAfter:
+    #     - build
+    #   params:
+    #     - name: git-url
+    #       value: "$(tasks.setup.results.git-url)"
+    #     - name: git-revision
+    #       value: "$(tasks.setup.results.git-revision)"
+    #     - name: source-dir
+    #       value: "$(tasks.setup.results.source-dir)"
+    #     - name: image-server
+    #       value: "$(tasks.setup.results.image-server)"
+    #     - name: image-namespace
+    #       value: "$(tasks.setup.results.image-namespace)"
+    #     - name: image-repository
+    #       value: "$(tasks.setup.results.image-repository)"
+    #     - name: image-tag
+    #       value: "$(tasks.setup.results.image-tag)"
+    #     - name: app-namespace
+    #       value: "$(tasks.setup.results.app-namespace)"
+    #     - name: app-name
+    #       value: "$(tasks.setup.results.app-name)"
+    #     - name: deploy-ingress-type
+    #       value: "$(tasks.setup.results.deploy-ingress-type)"
+    #     - name: tools-image
+    #       value: "$(tasks.setup.results.tools-image)"
     # - name: health
     #   taskRef:
     #     name: ibm-health-check
@@ -152,7 +152,7 @@ spec:
       taskRef:
         name: ibm-tag-release
       runAfter:
-        - deploy  #health
+        - build #health
       params:
         - name: git-url
           value: "$(tasks.setup.results.git-url)"
