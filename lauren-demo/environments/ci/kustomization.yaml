@@ -33,6 +33,6 @@ resources:
 - tasks/ibm-tag-release.yaml
 - triggerbindings/cntk-binding.yaml
 - triggertemplates/lauren-demo-dev.yaml
-# - tasks/12-functional-tests.yaml
+- tasks/ibm-functional-test.yaml
 # # - tasks/13-jmeter-performance-test.yaml
 # - tasks/4-smoke-tests.yaml
