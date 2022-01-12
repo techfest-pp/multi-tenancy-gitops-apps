@@ -1,0 +1,3 @@
+global: {}
+lauren-demo:
+  replicaCount: 1
