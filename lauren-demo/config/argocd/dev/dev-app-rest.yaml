@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: apps-Lauren-demo-rest-dev-1
+  name: apps-lauren-demo-rest-dev-1
   annotations:
     argocd.argoproj.io/sync-wave: "300"
   finalizers:
@@ -12,7 +12,7 @@ spec:
     server: https://kubernetes.default.svc
   project: applications
   source:
-    path: Lauren-demo/environments/dev
+    path: lauren-demo/environments/dev
     repoURL: https://github.com/client-engineering-gitops-h/multi-tenancy-gitops-apps.git
     targetRevision: master
   syncPolicy:

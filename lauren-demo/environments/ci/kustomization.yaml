@@ -7,8 +7,8 @@ resources:
 # - pipelines/ibm-test-pipeline-for-dev.yaml
 # - pipelines/ibm-test-pipeline-for-stage.yaml
 # #- pipelines/java-maven-dev-pipeline.yaml
-# - pipelines/Lauren-demo-pipeline-dev.yaml
-- pipelines/Lauren-demo-dev-pipeline.yaml
+# - pipelines/lauren-demo-pipeline-dev.yaml
+- pipelines/lauren-demo-dev-pipeline.yaml
 # - roles/custom-pipeline-sa-clusterrole.yaml
 # - roles/custom-pipeline-sa-role.yaml
 - roles/custom-ci-pipeline-sa-rolebinding.yaml
@@ -34,7 +34,7 @@ resources:
 - tasks/ibm-setup.yaml
 - tasks/ibm-tag-release.yaml
 - triggerbindings/cntk-binding.yaml
-- triggertemplates/Lauren-demo-dev.yaml
+- triggertemplates/lauren-demo-dev.yaml
 # - tasks/12-functional-tests.yaml
 # # - tasks/13-jmeter-performance-test.yaml
 # - tasks/4-smoke-tests.yaml

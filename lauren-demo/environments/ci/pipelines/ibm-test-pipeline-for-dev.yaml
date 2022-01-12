@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
-  name: ibm-Lauren-demo-promote-dev-stage
+  name: ibm-lauren-demo-promote-dev-stage
   annotations:
     app.openshift.io/runtime: test
 spec:
@@ -19,13 +19,13 @@ spec:
       default: staging
     - name: app-path
       description: Path in gitops repo
-      default: Lauren-demo/environments
+      default: lauren-demo/environments
     - name: git-pr
       description: Enable the pipeline to do a PR for the gitops repo
       default: "true"
     - name: test-file
       description: Path of the postman collection
-      default: "postman/Lauren-demo.postman_collection.json"
+      default: "postman/lauren-demo.postman_collection.json"
   tasks:
     - name: dev-instance-tests
       taskRef:

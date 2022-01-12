@@ -7,7 +7,7 @@ metadata:
 spec:
   serviceAccountName: pipeline
   triggers:
-    - name: Lauren-demo-dev
+    - name: lauren-demo-dev
       interceptors:
         - ref:
             name: "cel"
@@ -17,16 +17,16 @@ spec:
       bindings:
         - ref: cnkt-trigger-binding
       template:
-        ref: Lauren-demo-dev
-    - name: Lauren-demo-dev
+        ref: lauren-demo-dev
+    - name: lauren-demo-dev
       interceptors:
         - ref:
             name: "cel"
           params:
           - name: "filter"
-            value: "header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/Lauren-demo-client-engineering-gitops-h' && body.repository.full_name == 'client-engineering-gitops-h/Lauren-demo'"
+            value: "header.match('X-GitHub-Event', 'push') && body.ref == 'refs/heads/Lauren-demo-client-engineering-gitops-h' && body.repository.full_name == 'client-engineering-gitops-h/lauren-demo'"
       bindings:
         - ref: cnkt-trigger-binding
       template:
-        ref: Lauren-demo-dev
+        ref: lauren-demo-dev
       
