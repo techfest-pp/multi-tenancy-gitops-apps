@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: apps-lauren-demo-rest-dev-1
+  name: dev-lauren-demo
   annotations:
     argocd.argoproj.io/sync-wave: "300"
   finalizers:
