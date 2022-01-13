@@ -2,7 +2,7 @@ apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerTemplate
 metadata:
   labels:
-    app: laren-demo-dev
+    app: lauren-demo-dev
   name: lauren-demo-dev
 spec:
   params:
