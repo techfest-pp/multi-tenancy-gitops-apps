@@ -3,8 +3,8 @@ resources:
 - eventlisteners/cntk-event-listener.yaml
 - pipelines/ibm-lauren-dev-stage.yaml
 - pipelines/lauren-demo-dev-pipeline.yaml
-# - roles/custom-ci-pipeline-sa-rolebinding.yaml
-# - roles/custom-dev-pipeline-sa-rolebinding.yaml
+- roles/custom-ci-pipeline-sa-rolebinding.yaml
+- roles/custom-dev-pipeline-sa-rolebinding.yaml
 - routes/cntk-route.yaml
 - secrets/artifactory-access-secret.yaml
 - secrets/git-credentials-secret.yaml
