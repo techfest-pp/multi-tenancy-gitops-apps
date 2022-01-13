@@ -9,7 +9,7 @@ resources:
 - secrets/artifactory-access-secret.yaml
 - secrets/git-credentials-secret.yaml
 - secrets/ibm-entitled-registry-credentials-secret.yaml
-- tasks/0-setup.yaml
+# - tasks/0-setup.yaml
 - tasks/1-java-maven-test.yaml
 - tasks/2-lint-dockerfile.yaml
 - tasks/4-deploy.yaml

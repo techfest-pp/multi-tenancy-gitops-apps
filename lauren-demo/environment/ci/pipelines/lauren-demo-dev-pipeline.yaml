@@ -27,9 +27,6 @@ spec:
     - name: security
       description: Enable security for queueManager
       default: "false"
-    - name: ha
-      description: Enable ha for queueManager
-      default: "false"
     - name: git-pr
       description: Enable the pipeline to do a PR for the gitops repo
       default: "false"
@@ -44,8 +41,8 @@ spec:
           value: $(params.git-revision)
         - name: scan-image
           value: $(params.scan-image)
-        - name: lint-dockerfile
-          value: $(params.lint-dockerfile)
+        # - name: lint-dockerfile
+        #   value: $(params.lint-dockerfile)
     # - name: test
     #   taskRef:
     #     name: ibm-javascript-test
@@ -98,6 +95,7 @@ spec:
           value: "$(tasks.setup.results.image-repository)"
         - name: image-tag
           value: "$(tasks.setup.results.image-tag)"
+        
     # - name: deploy
     #   taskRef:
     #     name: ibm-deploy
