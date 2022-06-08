@@ -9,9 +9,9 @@ metadata:
 data:
   branch: master
   host: github.com
-  org: client-engineering-gitops-h
-  owner: client-engineering-gitops-h
+  org: techfest-pp
+  owner: techfest-pp
   parentdir: .
   protocol: https
   repo: multi-tenancy-gitops-apps
-  url: https://github.com/client-engineering-gitops-h/multi-tenancy-gitops-apps.git
+  url: https://github.com/techfest-pp/multi-tenancy-gitops-apps.git
